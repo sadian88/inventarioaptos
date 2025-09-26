@@ -1,0 +1,15 @@
+# Flutter/Dart/Pub related
+**/.DS_Store
+.dart_tool/
+.packages
+.pub-cache/
+build/
+android/
+ios/
+linux/
+macos/
+windows/
+web/
+coverage/
+.idea/
+.vscode/
