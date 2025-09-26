@@ -1,7 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
 
+
 import 'package:flutter/services.dart';
+
 import 'package:path_provider/path_provider.dart';
 
 import '../data/default_items.dart';
@@ -15,12 +17,16 @@ class InventoryRepository {
   static const String _fileName = 'apartments_inventory.json';
 
   Future<File> _inventoryFile() async {
+
     Directory directory;
     try {
       directory = await getApplicationDocumentsDirectory();
     } on MissingPluginException {
       directory = await getTemporaryDirectory();
     }
+
+
+    final directory = await getApplicationDocumentsDirectory();
 
     final path = '${directory.path}/$_fileName';
     return File(path);
